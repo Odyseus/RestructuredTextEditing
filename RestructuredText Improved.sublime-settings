@@ -1,0 +1,32 @@
+{
+    "extensions": [
+        "rst",
+        "rest",
+        "restructuredtext"
+    ],
+
+    // Controls what scopes auto complete will be triggered in.
+    "auto_complete_selector": "source, text",
+
+    // Convenience settings to disable key bindings.
+    "rste.keymap_disable.emphasis": true,
+    "rste.keymap_disable.flowtable": true,
+    "rste.keymap_disable.go_to_footnote_definition": true,
+    "rste.keymap_disable.go_to_footnote_reference": true,
+    "rste.keymap_disable.header_change_level": false,
+    "rste.keymap_disable.headline_move": true,
+    "rste.keymap_disable.indent_list_item": false,
+    "rste.keymap_disable.literal": true,
+    "rste.keymap_disable.magic_footnotes": false,
+    "rste.keymap_disable.merge_cells_down": true,
+    "rste.keymap_disable.merge_cells_left": true,
+    "rste.keymap_disable.merge_cells_right": true,
+    "rste.keymap_disable.merge_cells_up": true,
+    "rste.keymap_disable.simpletable": true,
+    "rste.keymap_disable.smart_folding": false,
+    "rste.keymap_disable.smart_header": false,
+    "rste.keymap_disable.smart_list": false,
+    "rste.keymap_disable.strongemphasis": true,
+    "rste.keymap_disable.substitution": true,
+    "rste.keymap_disable.table": false,
+}

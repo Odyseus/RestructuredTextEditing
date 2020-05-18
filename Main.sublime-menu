@@ -1,0 +1,59 @@
+[{
+    "caption": "Preferences",
+    "mnemonic": "n",
+    "id": "preferences",
+    "children": [{
+        "caption": "Package Settings",
+        "mnemonic": "P",
+        "id": "package-settings",
+        "children": [{
+            "caption": "RestructuredTextEditing",
+            "children": [{
+                "command": "edit_settings",
+                "caption": "Plugin Settings",
+                "args": {
+                    "base_file": "${packages}/RestructuredTextEditing/RestructuredTextEditing.sublime-settings",
+                    "default": "// RestructuredTextEditing - User\n{\n\t$0\n}\n"
+                }
+            }, {
+                "command": "edit_settings",
+                "caption": "Syntax Settings",
+                "args": {
+                    "base_file": "${packages}/RestructuredTextEditing/RestructuredText Improved.sublime-settings",
+                    "default": "// RestructuredTextEditing - RestructuredText Improved - User\n{\n\t$0\n}\n"
+                }
+            }, {
+                "caption": "Key Bindings",
+                "command": "edit_settings",
+                "args": {
+                    "base_file": "${packages}/RestructuredTextEditing/Default ($platform).sublime-keymap",
+                    "default": "${packages}/User/Default ($platform).sublime-keymap"
+                }
+            }, {
+                "caption": "RestructuredText Improved original docs",
+                "children": [{
+                    "caption": "README",
+                    "command": "open_file",
+                    "args": {
+                        "file": "${packages}/RestructuredTextEditing/docs/reStructuredText Improved README.rst"
+                    }
+                }, {
+                    "caption": "Demo",
+                    "command": "open_file",
+                    "args": {
+                        "file": "${packages}/RestructuredTextEditing/docs/reStructuredText Improved syntax demo.rst"
+                    }
+                }]
+            }, {
+                "caption": "Restructured Text (RST) Snippets original docs",
+                "children": [{
+                    "caption": "README",
+                    "command": "open_file",
+                    "args": {
+                        "file": "${packages}/RestructuredTextEditing/docs/Restructured Text (RST) Snippets plugin README.rst"
+                    }
+                }]
+            }]
+        }]
+    }]
+}]

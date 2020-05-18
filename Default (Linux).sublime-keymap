@@ -1,0 +1,716 @@
+[{
+        "keys": ["ctrl+alt+b"],
+        "command": "rste_strongemphasis",
+        "context": [{
+            "key": "setting.rste.keymap_disable.strongemphasis",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["ctrl+alt+i"],
+        "command": "rste_emphasis",
+        "context": [{
+            "key": "setting.rste.keymap_disable.emphasis",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["ctrl+alt+l"],
+        "command": "rste_literal",
+        "context": [{
+            "key": "setting.rste.keymap_disable.literal",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["ctrl+alt+s"],
+        "command": "rste_substitution",
+        "context": [{
+            "key": "setting.rste.keymap_disable.substitution",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["ctrl+t", "enter"],
+        "command": "rste_table",
+        "context": [{
+            "key": "setting.rste.keymap_disable.table",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["ctrl+t", "s"],
+        "command": "rste_simpletable",
+        "context": [{
+            "key": "setting.rste.keymap_disable.simpletable",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["ctrl+t", "r"],
+        "command": "rste_flowtable",
+        "context": [{
+            "key": "setting.rste.keymap_disable.flowtable",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["ctrl+t", "down"],
+        "command": "rste_merge_cells_down",
+        "context": [{
+                "key": "setting.rste.keymap_disable.merge_cells_down",
+                "operator": "not_equal",
+                "operand": true
+            }, {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "text.restructuredtext | comment.block.documentation.python"
+            }, {
+                "key": "preceding_text",
+                "operator": "regex_contains",
+                "operand": "^\\s*\\|*"
+            }
+
+        ]
+    }, {
+        "keys": ["ctrl+t", "up"],
+        "command": "rste_merge_cells_up",
+        "context": [{
+                "key": "setting.rste.keymap_disable.merge_cells_up",
+                "operator": "not_equal",
+                "operand": true
+            }, {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "text.restructuredtext | comment.block.documentation.python"
+            }, {
+                "key": "preceding_text",
+                "operator": "regex_contains",
+                "operand": "^\\s*\\|*"
+            }
+
+        ]
+    }, {
+        "keys": ["ctrl+t", "right"],
+        "command": "rste_merge_cells_right",
+        "context": [{
+                "key": "setting.rste.keymap_disable.merge_cells_right",
+                "operator": "not_equal",
+                "operand": true
+            }, {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "text.restructuredtext | comment.block.documentation.python"
+            }, {
+                "key": "preceding_text",
+                "operator": "regex_contains",
+                "operand": "^\\s*\\|*"
+            }
+
+        ]
+    }, {
+        "keys": ["ctrl+t", "left"],
+        "command": "rste_merge_cells_left",
+        "context": [{
+                "key": "setting.rste.keymap_disable.merge_cells_left",
+                "operator": "not_equal",
+                "operand": true
+            }, {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "text.restructuredtext | comment.block.documentation.python"
+            }, {
+                "key": "preceding_text",
+                "operator": "regex_contains",
+                "operand": "^\\s*\\|*"
+            }
+
+        ]
+    }, {
+        "keys": ["enter"],
+        "command": "rste_smart_list",
+        "context": [{
+            "key": "setting.rste.keymap_disable.smart_list",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": true,
+            "match_all": true
+        }, {
+            "key": "preceding_text",
+            "operator": "regex_contains",
+            "operand": "^\\s*([-+*]|([(]?(\\d+|#|[a-y]|[A-Y]|[MDCLXVImdclxvi]+))[).])\\s+",
+            "match_all": true
+        }]
+    }, {
+        "keys": ["shift+tab"],
+        "command": "rste_smart_folding",
+        "context": [{
+            "key": "setting.rste.keymap_disable.smart_folding",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["ctrl++"],
+        "command": "rste_header_change_level",
+        "context": [{
+            "key": "setting.rste.keymap_disable.header_change_level",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["ctrl+keypad_plus"],
+        "command": "rste_header_change_level",
+        "context": [{
+            "key": "setting.rste.keymap_disable.header_change_level",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["ctrl+-"],
+        "command": "rste_header_change_level",
+        "args": {
+            "offset": 1
+        },
+        "context": [{
+            "key": "setting.rste.keymap_disable.header_change_level",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["ctrl+keypad_minus"],
+        "command": "rste_header_change_level",
+        "args": {
+            "offset": 1
+        },
+        "context": [{
+            "key": "setting.rste.keymap_disable.header_change_level",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["tab"],
+        "command": "rste_smart_header",
+        "context": [{
+            "key": "setting.rste.keymap_disable.smart_header",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }, {
+            "key": "preceding_text",
+            "operator": "regex_match",
+            "operand": "([!\\\"#$%&'\\\\()*+,\\-./:;<=>?@\\[\\]\\^_`{|}~])+$"
+            // NOTE: Original RegEx. I wanted to be able to trigger smart header
+            // command with just one character, not three.
+            // "operand": "([!\\\"#$%&'\\\\()*+,\\-./:;<=>?@\\[\\]\\^_`{|}~])\\1\\1+$"
+        }]
+    }, {
+        "keys": ["alt+shift+f"],
+        "command": "rste_magic_footnotes",
+        "context": [{
+            "key": "setting.rste.keymap_disable.magic_footnotes",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python",
+            "match_all": true
+        }]
+    }, {
+        "keys": ["shift+up"],
+        "command": "rste_go_to_footnote_reference",
+        "context": [{
+                "key": "setting.rste.keymap_disable.go_to_footnote_reference",
+                "operator": "not_equal",
+                "operand": true
+            }, {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "text.restructuredtext | comment.block.documentation.python",
+                "match_all": true
+            }, {
+                "key": "selection_empty",
+                "operator": "equal",
+                "operand": true,
+                "match_all": true
+            }, {
+                "key": "preceding_text",
+                "operator": "regex_contains",
+                "operand": "^\\.\\. \\[\\d+\\]"
+            }
+
+        ]
+    }, {
+        "keys": ["shift+down"],
+        "command": "rste_go_to_footnote_definition",
+        "context": [{
+            "key": "setting.rste.keymap_disable.go_to_footnote_definition",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python",
+            "match_all": true
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": true,
+            "match_all": true
+        }, {
+            "key": "preceding_text",
+            "operator": "regex_contains",
+            "operand": ".*\\[\\d+\\]_"
+        }]
+    }, {
+        "keys": ["alt+down"],
+        "command": "rste_headline_move",
+        "args": {
+            "forward": true,
+            "same_or_high": false
+        },
+        "context": [{
+            "key": "setting.rste.keymap_disable.headline_move",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["alt+shift+down"],
+        "command": "rste_headline_move",
+        "args": {
+            "forward": true,
+            "same_or_high": true
+        },
+        "context": [{
+            "key": "setting.rste.keymap_disable.headline_move",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["alt+up"],
+        "command": "rste_headline_move",
+        "args": {
+            "forward": false,
+            "same_or_high": false
+        },
+        "context": [{
+            "key": "setting.rste.keymap_disable.headline_move",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["alt+shift+up"],
+        "command": "rste_headline_move",
+        "args": {
+            "forward": false,
+            "same_or_high": true
+        },
+        "context": [{
+            "key": "setting.rste.keymap_disable.headline_move",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }]
+    }, {
+        "keys": ["tab"],
+        "command": "rste_indent_list_item",
+        "context": [{
+            "key": "setting.rste.keymap_disable.indent_list_item",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": true,
+            "match_all": true
+        }, {
+            "key": "preceding_text",
+            "operator": "regex_contains",
+            "operand": "^\\s*([-+*]|([(]?(\\d+|#|[a-y]|[A-Y]|[MDCLXVImdclxvi]+))[).])\\s+$",
+            "match_all": true
+        }, {
+            "key": "following_text",
+            "operator": "regex_contains",
+            "operand": "^$",
+            "match_all": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python",
+            "match_all": true
+        }]
+    }, {
+        "keys": ["shift+tab"],
+        "command": "rste_indent_list_item",
+        "args": {
+            "reverse": true
+        },
+        "context": [{
+            "key": "setting.rste.keymap_disable.indent_list_item",
+            "operator": "not_equal",
+            "operand": true
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": true,
+            "match_all": true
+        }, {
+            "key": "preceding_text",
+            "operator": "regex_contains",
+            "operand": "^\\s*([-+*]|([(]?(\\d+|#|[a-y]|[A-Y]|[MDCLXVImdclxvi]+))[).])\\s+$",
+            "match_all": true
+        }, {
+            "key": "following_text",
+            "operator": "regex_contains",
+            "operand": "^$",
+            "match_all": true
+        }, {
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python",
+            "match_all": true
+        }]
+    },
+    // Auto-pair `
+    {
+        "keys": ["`"],
+        "command": "insert_snippet",
+        "args": {
+            "contents": "`$0`"
+        },
+        "context": [{
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }, {
+            "key": "setting.auto_match_enabled",
+            "operator": "equal",
+            "operand": true
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": true,
+            "match_all": true
+        }, {
+            "key": "following_text",
+            "operator": "regex_contains",
+            "operand": "^(?:\t| |\\)|]|\\}|>|$)",
+            "match_all": true
+        }, {
+            "key": "preceding_text",
+            "operator": "not_regex_contains",
+            "operand": "[`a-zA-Z0-9_]$",
+            "match_all": true
+        }, {
+            "key": "eol_selector",
+            "operator": "not_equal",
+            "operand": "string.quoted.single",
+            "match_all": true
+        }]
+    }, {
+        "keys": ["`"],
+        "command": "insert_snippet",
+        "args": {
+            "contents": "`${0:$SELECTION}`"
+        },
+        "context": [{
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }, {
+            "key": "setting.auto_match_enabled",
+            "operator": "equal",
+            "operand": true
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": false,
+            "match_all": true
+        }]
+    }, {
+        "keys": ["`"],
+        "command": "move",
+        "args": {
+            "by": "characters",
+            "forward": true
+        },
+        "context": [{
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }, {
+            "key": "setting.auto_match_enabled",
+            "operator": "equal",
+            "operand": true
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": true,
+            "match_all": true
+        }, {
+            "key": "following_text",
+            "operator": "regex_contains",
+            "operand": "^`",
+            "match_all": true
+        }]
+    }, {
+        "keys": ["backspace"],
+        "command": "run_macro_file",
+        "args": {
+            "file": "res://Packages/Default/Delete Left Right.sublime-macro"
+        },
+        "context": [{
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }, {
+            "key": "setting.auto_match_enabled",
+            "operator": "equal",
+            "operand": true
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": true,
+            "match_all": true
+        }, {
+            "key": "preceding_text",
+            "operator": "regex_contains",
+            "operand": "`$",
+            "match_all": true
+        }, {
+            "key": "following_text",
+            "operator": "regex_contains",
+            "operand": "^`",
+            "match_all": true
+        }]
+    },
+    // Auto-pair *
+    {
+        "keys": ["*"],
+        "command": "insert_snippet",
+        "args": {
+            "contents": "*${0:$SELECTION}*"
+        },
+        "context": [{
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }, {
+            "key": "setting.auto_match_enabled",
+            "operator": "equal",
+            "operand": true
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": false,
+            "match_all": true
+        }]
+    }, {
+        "keys": ["*"],
+        "command": "move",
+        "args": {
+            "by": "characters",
+            "forward": true
+        },
+        "context": [{
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }, {
+            "key": "setting.auto_match_enabled",
+            "operator": "equal",
+            "operand": true
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": true,
+            "match_all": true
+        }, {
+            "key": "following_text",
+            "operator": "regex_contains",
+            "operand": "^\\*",
+            "match_all": true
+        }]
+    }, {
+        "keys": ["backspace"],
+        "command": "run_macro_file",
+        "args": {
+            "file": "res://Packages/Default/Delete Left Right.sublime-macro"
+        },
+        "context": [{
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }, {
+            "key": "setting.auto_match_enabled",
+            "operator": "equal",
+            "operand": true
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": true,
+            "match_all": true
+        }, {
+            "key": "preceding_text",
+            "operator": "regex_contains",
+            "operand": "\\*$",
+            "match_all": true
+        }, {
+            "key": "following_text",
+            "operator": "regex_contains",
+            "operand": "^\\*",
+            "match_all": true
+        }]
+    },
+    // Auto-pair |
+    {
+        "keys": ["|"],
+        "command": "insert_snippet",
+        "args": {
+            "contents": "|${0:$SELECTION}|"
+        },
+        "context": [{
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }, {
+            "key": "setting.auto_match_enabled",
+            "operator": "equal",
+            "operand": true
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": false,
+            "match_all": true
+        }]
+    }, {
+        "keys": ["|"],
+        "command": "move",
+        "args": {
+            "by": "characters",
+            "forward": true
+        },
+        "context": [{
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }, {
+            "key": "setting.auto_match_enabled",
+            "operator": "equal",
+            "operand": true
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": true,
+            "match_all": true
+        }, {
+            "key": "following_text",
+            "operator": "regex_contains",
+            "operand": "^\\|",
+            "match_all": true
+        }]
+    }, {
+        "keys": ["backspace"],
+        "command": "run_macro_file",
+        "args": {
+            "file": "res://Packages/Default/Delete Left Right.sublime-macro"
+        },
+        "context": [{
+            "key": "selector",
+            "operator": "equal",
+            "operand": "text.restructuredtext | comment.block.documentation.python"
+        }, {
+            "key": "setting.auto_match_enabled",
+            "operator": "equal",
+            "operand": true
+        }, {
+            "key": "selection_empty",
+            "operator": "equal",
+            "operand": true,
+            "match_all": true
+        }, {
+            "key": "preceding_text",
+            "operator": "regex_contains",
+            "operand": "\\|$",
+            "match_all": true
+        }, {
+            "key": "following_text",
+            "operator": "regex_contains",
+            "operand": "^\\|",
+            "match_all": true
+        }]
+    }
+]

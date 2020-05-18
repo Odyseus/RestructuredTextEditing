@@ -1,0 +1,140 @@
+{
+    "preview_stylesheets": [
+        // "${packages}/RestructuredTextEditing/st_assets/css/bootstrap.min.css",
+        // "${packages}/RestructuredTextEditing/st_assets/css/bootstrap.tweaks.css"
+    ],
+    // https://devguide.python.org/documenting/#sections
+    "headers": [
+        "##",
+        "**",
+        "=",
+        "-",
+        "^",
+        "\"",
+        "+",
+        "~",
+        "'",
+        ":"
+    ],
+    "commands_scope": "text.restructuredtext - source - meta.tag | punctuation.definition.tag.begin | comment.block.documentation.python",
+    // Prevent Sublime Text from showing completions based on the contents of the view.
+    "completions_ignore_content": false,
+    // Prevent Sublime Text from showing completions based on .sublime-completions files.
+    "completions_ignore_files": false,
+    "completions_scope": "text.restructuredtext - source - meta.tag | punctuation.definition.tag.begin | comment.block.documentation.python",
+    "completions": [{
+            "trigger": "h1\tHeading level 1",
+            "contents": "${1/./*/g}\n${1}\n${1/./*/g}\n\n$0"
+        }, {
+            "trigger": "h2\tHeading level 2",
+            "contents": "${1}\n${1/./=/g}\n\n$0"
+        }, {
+            "trigger": "h3\tHeading level 3",
+            "contents": "${1}\n${1/./-/g}\n\n$0"
+        }, {
+            "trigger": "h4\tHeading level 4",
+            "contents": "${1}\n${1/./^/g}\n\n$0"
+        }, {
+            "trigger": "h5\tHeading level 5",
+            "contents": "${1}\n${1/./\"/g}\n\n$0"
+        }, {
+            "trigger": "h6\tHeading level 6",
+            "contents": "${1}\n${1/./+/g}\n\n$0"
+        }, {
+            "trigger": "h7\tHeading level 7",
+            "contents": "${1}\n${1/./~/g}\n\n$0"
+        }, {
+            "trigger": "h8\tHeading level 8",
+            "contents": "${1}\n${1/./#/g}\n\n$0"
+        }, {
+            "trigger": "e\tEmphasis",
+            "contents": "*${1}*"
+        }, {
+            "trigger": "se\tStrong emphasis",
+            "contents": "**${1}**"
+        }, {
+            "trigger": "lit\tLiteral",
+            "contents": "``${1}``"
+        }, {
+            "trigger": "list\tUnordered list",
+            "contents": "- ${1:text}\n- ${2}\n- ${3}"
+        }, {
+            "trigger": "listn\tOrdered list",
+            "contents": "1. ${1}\n2. ${2}\n3. ${3}"
+        }, {
+            "trigger": "listan\tOrdered list (auto)",
+            "contents": "#. ${1}\n#. ${2}\n#. ${3}"
+        }, {
+            "trigger": "def\tDefinition list",
+            "contents": "${1:term} : ${2:classifier}\n\t${3:definition}"
+        }, {
+            "trigger": "code\tCode block",
+            "contents": ".. code-block:: ${1:language}\n\n\t${2:source}"
+        }, {
+            "trigger": "img\tImage",
+            "contents": ".. image:: ${1:path}\n\t:target:\n\n$0"
+        }, {
+            "trigger": "fig\tFigure",
+            "contents": ".. figure:: ${1:path}\n\n\t${2:caption}\n\n$0"
+        }, {
+            "trigger": "table\tTable",
+            "contents": "${1/./=/g}\n${1:heading}\n${1/./=/g}\n${2:row}\n${3:row}\n${4:row}\n${1/./=/g}"
+        }, {
+            "trigger": "st\tSimple table",
+            "contents": "${1/./=/g}\n${1:heading}\n${1/./=/g}\n${2:row}\n${3:row}\n${4:row}\n${1/./=/g}"
+        }, {
+            "trigger": "link\tLink",
+            "contents": "`${1:link_variable_name}`_ $0\n\n.. _${1}: ${2:http://}"
+        }, {
+            "trigger": "anolink\tAnonymous link",
+            "contents": "`${1:Anonymous} <${2:http://}>`__"
+        }, {
+            "trigger": "linki\tLink image",
+            "contents": "`${1:link_variable_name} <${2:http://}>`_ $0"
+        }, {
+            "trigger": "fn\tFootnote",
+            "contents": "[${2:#}]_ $0\n\n.. [${2}] ${1:footnote}"
+        }, {
+            "trigger": "epi\tEpigraph",
+            "contents": ".. epigraph::\n\n\t${1:quote}\n\n\t-- ${2:author}\n\n$0"
+        }, {
+            "trigger": "math",
+            "contents": ".. math::\n\n\t${1:equation}$0\n\n"
+        },
+        // admonitions
+        {
+            "trigger": "att\tAdmonition - attention",
+            "contents": ".. attention::\n\n\t${1:note}\n\n$0"
+        }, {
+            "trigger": "cau\tAdmonition - caution",
+            "contents": ".. caution::\n\n\t${1:note}\n\n$0"
+        }, {
+            "trigger": "dan\tAdmonition - danger",
+            "contents": ".. danger::\n\n\t${1:note}\n\n$0"
+        }, {
+            "trigger": "error\tAdmonition - error",
+            "contents": ".. error::\n\n\t${1:note}\n\n$0"
+        }, {
+            "trigger": "hint\tAdmonition - hint",
+            "contents": ".. hint::\n\n\t${1:note}\n\n$0"
+        }, {
+            "trigger": "imp\tAdmonition - important",
+            "contents": ".. important::\n\n\t${1:note}\n\n$0"
+        }, {
+            "trigger": "note\tAdmonition - note",
+            "contents": ".. note::\n\n\t${1:note}\n\n$0"
+        }, {
+            "trigger": "tip\tAdmonition - tip",
+            "contents": ".. tip::\n\n\t${1:note}\n\n$0"
+        }, {
+            "trigger": "warn\tAdmonition - warning",
+            "contents": ".. warning::\n\n\t${1:note}\n\n$0"
+        },
+
+        // This directive is from a custom Sphinx extension.
+        {
+            "trigger": "ctx\tAdmonition - contextual-admonition",
+            "contents": ".. contextual-admonition::\n\t:context: ${1:note|warning|error}\n\t:title: ${2:Admonition title}\n\n\t${3:Admonition body}"
+        }
+    ]
+}
